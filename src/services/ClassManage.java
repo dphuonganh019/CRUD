@@ -26,6 +26,17 @@ public class ClassManage {
         for(Classes classes : classes){
             System.out.println(classes);
         }
+        if(classes.isEmpty()){
+            System.out.println("There is no class");
+        }
     }
+
+    public void addClasses(){
+        System.out.println("Input Class's name to create new class");
+        String nameClass = sc.nextLine();// hứng dữ liệu class name nhập từ bàn phím
+        classes.add(new Classes(nameClass));// Tạo mới 1 đối tượng class với constructor Classes rồi gán giá trị nameClass vào name trong Constructor
+        System.out.println("Add Class successfully");
+    }
+    //Tạo hàm tìm kiếm đối tượng
 
 }
